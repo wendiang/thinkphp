@@ -1,0 +1,39 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.wrap{
+	width:500px;
+	height:300px;
+	border:1px solid #ccc;
+	margin:50px auto;
+	text-align:center;
+    position:relative;
+}
+.wrap .file{
+
+	display:none;
+
+}
+.wrap .upload_btn{
+     width:100px;
+     height:100px;
+     position:absolute;
+     top:50%;
+     margin-top:-50px;
+     left:50%;
+     margin-left:-50px;
+     border:1px solid #ccc;
+     background:#ccc;
+     cursor:pointer;
+}
+.wrap .upload_btn:before{
+	content:"上传图片";
+	width:100px;
+	height:100px;
+	text-align:center;
+	line-height:100px;
+
+
+}

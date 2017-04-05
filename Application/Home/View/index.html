@@ -1,0 +1,48 @@
+ !DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0">
+	<title>h5图片上传</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/upload.css">
+</head>
+<body>
+     <div class="wrap">
+     <form  method="post"  enctype="multipart/form-data" class="form">
+     	
+     		<input type="file" class="file" name="image">
+     	
+     	    <div class="upload_btn">
+     	    	
+     	    </div>
+     </form>
+     	
+
+     </div>
+	
+</body>
+</html>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	(function(){
+           $(".upload_btn").click(function(){
+           	var form=$(".form");
+             var formdata=new FormData(form);
+           	$(".file").click();
+           	$(".file").change(function(){
+               $.ajax({
+				  url: "index.php/index/Index/upload",
+				  type: "POST",
+				  data: formdata,
+				  processData: false,  
+				  contentType: false ,
+[M`O1				  success:function(data){
+                       console.log(data.msg);
+				  }
+				});
+           	})
+           })
+
+
+	})(jQuery);
+</script>
